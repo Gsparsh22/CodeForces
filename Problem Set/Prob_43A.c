@@ -1,18 +1,33 @@
 #include <stdio.h>
 
-int main(){
+int main() {
     int n;
-    scanf("%d",&n);
+    scanf("%d", &n);
+    int a, b;
 
-    char s[n][20];
+    char s;
+    a = 1;
+    b = 0;
+    scanf(" %c", &s);
 
-    for(int i=0; i<n; i++){
-        for(int j=0; j<20; j++){
-            scanf("%c",&s[i][j]);
+    char p;
+
+    for (int i = 0; i < n; i++) {
+        scanf(" %c", &p);
+        if (p == s) {
+            b++;
+        }
+        else {
+            a++;
         }
     }
 
-    for(int i=0; i<n; i++){
-        if()
+    if (a > b) {
+        printf("%c", s);
     }
+    else {
+        printf("%c", p);
+    }
+
+    return 0;
 }
