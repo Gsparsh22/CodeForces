@@ -2,32 +2,30 @@
 
 int main() {
     int n;
+    char a[11];
+    char b[11];
     scanf("%d", &n);
-    int a, b;
+    int count_a = 1;
+    int count_b = 0;
 
-    char s;
-    a = 1;
-    b = 0;
-    scanf(" %c", &s);
-
-    char p;
-
-    for (int i = 0; i < n; i++) {
-        scanf(" %c", &p);
-        if (p == s) {
-            b++;
+    scanf("%s", a);
+    for(int i=0; i<n-1; i++){
+        scanf("%s", b);
+        if(strcmp(a, b) == 0){
+            count_a++;
         }
-        else {
-            a++;
+        else{
+            count_b++;
         }
     }
 
-    if (a > b) {
-        printf("%c", s);
+    if(count_a > count_b){
+        printf("%s\n", a);
     }
-    else {
-        printf("%c", p);
+    else if(count_a == count_b){
+        printf("DRAW");
     }
-
-    return 0;
+    else{
+        printf("%s\n", b);
+    }
 }
