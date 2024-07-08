@@ -15,6 +15,15 @@ int main(){
         cin >> n;
         int a[n];
         cin_array(a, n);
+        if(n==2){
+            cout << min(a[0], a[1]) << endl;
+        }
+        else{
+            a[n-1] = a[n-2];
+            a[0] = a[1];
+            sort(a, a+n);
+            cout << a[n-1] << endl;
+        }
     }
     return 0;
 }

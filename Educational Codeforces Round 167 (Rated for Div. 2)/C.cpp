@@ -13,8 +13,14 @@ int main(){
     while(t--){
         int n;
         cin >> n;
-        int a[n];
+        int a[n], b[n];
         cin_array(a, n);
+        cin_array(b, n);
+        int r1 = 0;
+        int r2 = 0;
+        /*
+        code
+        */
     }
     return 0;
 }

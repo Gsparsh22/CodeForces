@@ -15,6 +15,9 @@ int main(){
         cin >> n;
         int a[n];
         cin_array(a, n);
+        sort(a, a+n);
+        int ans = abs(a[n-1]-a[0]) + abs(a[n-1]-a[1]) + abs(a[n-2]-a[0]) + abs(a[n-2]-a[1]);
+        cout << ans << endl;
     }
     return 0;
 }
